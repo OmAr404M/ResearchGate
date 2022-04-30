@@ -14,7 +14,7 @@ namespace ResearchGate.Models
         public string Title { get; set; }
         public string Body { get; set; }
         //for Created date
-        public DateTime CreatedDateTime { get; set; }
+        public DateTime Date { get; set; }
        
         
 
