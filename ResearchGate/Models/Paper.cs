@@ -18,7 +18,7 @@ namespace ResearchGate.Models
         public DateTime CreatedDate { get; set; }
 
         //Relationships
-        public List<Auther_Paper> Auther_Papers { get; set; }
+        public List<Auther_Paper> Authers_Papers { get; set; }
 
         //Comment
         public int CinemaId { get; set; }

@@ -43,5 +43,8 @@ namespace ResearchGate.Models
         [Required(ErrorMessage = "Mobile is required")]
         [StringLength(50, MinimumLength = 3, ErrorMessage = "Mobile must be between 3 and 50 chars")]
         public long Mobile { get; set; }
+
+        //Relationships
+        public List<Auther_Paper> Authers_Papers { get; set; }
     }
 }
