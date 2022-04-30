@@ -28,6 +28,13 @@ namespace ResearchGate.Data
         }
 
 
+        public DbSet<Auther> Authers { get; set; }
+        public DbSet<Auther_Paper> Authers_Papers { get; set; }
+        public DbSet<Paper> Papers { get; set; }
+        public DbSet<Like> Likes { get; set; }
+        public DbSet<Comment> Comments { get; set; }
+
+
 
     }
 }
