@@ -92,8 +92,8 @@ namespace eTickets.Data
                             Title = "Paper 1",
                             Body ="This is the the first Paper",
                             CreatedDate = DateTime.Now.AddDays(-10),
-                            CommentId = 2,
-                            LikeId= 2
+                            CommentId = 3,
+                            LikeId= 3
                         },
                         new Paper()
                         {
@@ -103,9 +103,41 @@ namespace eTickets.Data
                             CommentId = 1,
                             LikeId= 1
                         },
+                         new Paper()
+                        {
+                            Title = "Paper 1",
+                            Body ="This is the the first Paper",
+                            CreatedDate = DateTime.Now.AddDays(-10),
+                            CommentId = 4,
+                            LikeId= 4
+                        },
+                          new Paper()
+                        {
+                            Title = "Paper 1",
+                            Body ="This is the the first Paper",
+                            CreatedDate = DateTime.Now.AddDays(-10),
+                            CommentId = 1,
+                            LikeId= 2
+                        },
+                           new Paper()
+                        {
+                            Title = "Paper 1",
+                            Body ="This is the the first Paper",
+                            CreatedDate = DateTime.Now.AddDays(-10),
+                            CommentId = 1,
+                            LikeId= 3
+                        },
+                            new Paper()
+                        {
+                            Title = "Paper 1",
+                            Body ="This is the the first Paper",
+                            CreatedDate = DateTime.Now.AddDays(-10),
+                            CommentId = 1,
+                            LikeId= 5
+                        },
 
                     });
-                    //context.SaveChanges();
+                    context.SaveChanges();
                 }
                 //Likes
                 if (!context.Likes.Any())
@@ -126,24 +158,106 @@ namespace eTickets.Data
                     });
                     context.SaveChanges();
                 }
-                //Actors & Movies
+                //Auther & Paper
                 if (!context.Authers_Papers.Any())
                 {
                     context.Authers_Papers.AddRange(new List<Auther_Paper>()
                     {
+                       new Auther_Paper()
+                        {
+                            AutherId = 1,
+                            PaperId = 1
+                        },
+                        new Auther_Paper()
+                        {
+                            AutherId = 3,
+                            PaperId = 1
+                        },
+
+                         new Auther_Paper()
+                        {
+                            AutherId = 1,
+                            PaperId = 2
+                        },
+                         new Auther_Paper()
+                        {
+                            AutherId = 4,
+                            PaperId = 2
+                        },
+
                         new Auther_Paper()
                         {
                             AutherId = 1,
-                            PaperId= 1
+                            PaperId = 3
                         },
                         new Auther_Paper()
                         {
                             AutherId = 2,
-                            PaperId= 2
+                            PaperId = 3
+                        },
+                        new Auther_Paper()
+                        {
+                            AutherId = 5,
+                            PaperId = 3
                         },
 
+
+                        new Auther_Paper()
+                        {
+                            AutherId = 2,
+                            PaperId = 4
+                        },
+                        new Auther_Paper()
+                        {
+                            AutherId = 3,
+                            PaperId = 4
+                        },
+                        new Auther_Paper()
+                        {
+                            AutherId = 4,
+                            PaperId = 4
+                        },
+
+
+                        new Auther_Paper()
+                        {
+                            AutherId = 2,
+                            PaperId = 5
+                        },
+                        new Auther_Paper()
+                        {
+                            AutherId = 3,
+                            PaperId = 5
+                        },
+                        new Auther_Paper()
+                        {
+                            AutherId = 4,
+                            PaperId = 5
+                        },
+                        new Auther_Paper()
+                        {
+                            AutherId = 5,
+                            PaperId = 5
+                        },
+
+
+                        new Auther_Paper()
+                        {
+                            AutherId = 3,
+                            PaperId = 6
+                        },
+                        new Auther_Paper()
+                        {
+                            AutherId = 4,
+                            PaperId = 6
+                        },
+                        new Auther_Paper()
+                        {
+                            AutherId = 5,
+                            PaperId = 6
+                        },
                     });
-                   // context.SaveChanges();
+                    context.SaveChanges();
                 }
             }
 
