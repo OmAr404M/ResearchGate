@@ -137,7 +137,7 @@ namespace eTickets.Data
                         },
 
                     });
-                    context.SaveChanges();
+                    //context.SaveChanges();
                 }
                 //Likes
                 if (!context.Likes.Any())
@@ -257,7 +257,7 @@ namespace eTickets.Data
                             PaperId = 6
                         },
                     });
-                    context.SaveChanges();
+                    //context.SaveChanges();
                 }
             }
 
