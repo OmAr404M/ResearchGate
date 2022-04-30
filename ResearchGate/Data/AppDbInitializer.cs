@@ -92,7 +92,7 @@ namespace eTickets.Data
                             Title = "Paper 1",
                             Body ="This is the the first Paper",
                             CreatedDate = DateTime.Now.AddDays(-10),
-                            CommentId = 1,
+                            CommentId = 2,
                             LikeId= 2
                         },
                         new Paper()
@@ -101,11 +101,11 @@ namespace eTickets.Data
                             Body ="This is the the first Paper",
                             CreatedDate = DateTime.Now.AddDays(-10),
                             CommentId = 1,
-                            LikeId= 2
+                            LikeId= 1
                         },
 
                     });
-                    context.SaveChanges();
+                    //context.SaveChanges();
                 }
                 //Likes
                 if (!context.Likes.Any())
@@ -143,7 +143,7 @@ namespace eTickets.Data
                         },
 
                     });
-                    context.SaveChanges();
+                   // context.SaveChanges();
                 }
             }
 
