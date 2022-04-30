@@ -121,19 +121,13 @@ namespace ResearchGate.Migrations
                     b.Property<string>("Body")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("CinemaId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("CommentId")
+                    b.Property<int>("CommentId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("LikeId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ProducerId")
+                    b.Property<int>("LikeId")
                         .HasColumnType("int");
 
                     b.Property<string>("Title")
@@ -171,11 +165,15 @@ namespace ResearchGate.Migrations
                 {
                     b.HasOne("ResearchGate.Models.Comment", "Comment")
                         .WithMany("Papers")
-                        .HasForeignKey("CommentId");
+                        .HasForeignKey("CommentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("ResearchGate.Models.Like", "Like")
                         .WithMany("Papers")
-                        .HasForeignKey("LikeId");
+                        .HasForeignKey("LikeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Comment");
 

@@ -17,5 +17,6 @@ namespace ResearchGate.Models
         
         //Relationships
         public List<Paper> Papers { get; set; }
+
     }
 }

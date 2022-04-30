@@ -21,12 +21,12 @@ namespace ResearchGate.Models
         public List<Auther_Paper> Authers_Papers { get; set; }
 
         //Comment
-        public int CinemaId { get; set; }
+        public int CommentId { get; set; }
         [ForeignKey("CommentId")]
         public Comment Comment { get; set; }
 
         //Like
-        public int ProducerId { get; set; }
+        public int LikeId { get; set; }
         [ForeignKey("LikeId")]
         public Like Like { get; set; }
 
