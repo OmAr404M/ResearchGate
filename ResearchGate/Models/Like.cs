@@ -14,6 +14,9 @@ namespace ResearchGate.Models
         [Display(Name = "Type")]
         [Required(ErrorMessage = "Type is required")]
         public string Type { get; set; }
+        
+         //Relationships
+        public List<Paper> Papers { get; set; }
 
 
     }
