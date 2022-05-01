@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -5,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 namespace ResearchGate.Models
 {
-    public class Auther
+    public class Auther:IdentityUser
     {
         [Key]
         public int Id { get; set; }
@@ -42,7 +43,7 @@ namespace ResearchGate.Models
         [Display(Name = "Mobile")]
         [Required(ErrorMessage = "Mobile is required")]
         [StringLength(50, MinimumLength = 3, ErrorMessage = "Mobile must be between 3 and 50 chars")]
-        public long Mobile { get; set; }
+        public string Mobile { get; set; }
 
         //Relationships
         public List<Auther_Paper> Authers_Papers { get; set; }

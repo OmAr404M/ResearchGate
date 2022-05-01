@@ -16,11 +16,11 @@ namespace ResearchGate.Controllers
 {
     public class AccountController : Controller
     {
-        private readonly UserManager<ApplicationUser> _userManager;
-        private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly UserManager<Auther> _userManager;
+        private readonly SignInManager<Auther> _signInManager;
         //private readonly AppDbContext _context;
 
-        public AccountController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, AppDbContext context)
+        public AccountController(UserManager<Auther> userManager, SignInManager<Auther> signInManager, AppDbContext context)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -72,9 +72,9 @@ namespace ResearchGate.Controllers
                 return View(registerVM);
             }
 
-            var newUser = new ApplicationUser()
+            var newUser = new Auther()
             {
-                FisrtName = registerVM.FirstName,
+                FirstName = registerVM.FirstName,
                 Email = registerVM.Email,
                 UserName = registerVM.Email
             };

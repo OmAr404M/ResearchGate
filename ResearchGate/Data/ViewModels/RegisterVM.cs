@@ -29,7 +29,7 @@ namespace ResearchGate.Data.ViewModels
         [Display(Name = "Mobile")]
         [Required(ErrorMessage = "Mobile is required")]
         [StringLength(50, MinimumLength = 3, ErrorMessage = "Mobile must be between 3 and 50 chars")]
-        public long Mobile { get; set; }
+        public string Mobile { get; set; }
 
         [Display(Name = "Email")]
         [Required(ErrorMessage = "Email is required")]
