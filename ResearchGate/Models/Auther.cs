@@ -12,7 +12,7 @@ namespace ResearchGate.Models
         public int Id { get; set; }
 
         [Display(Name = "Profile Picture")]
-        [Required(ErrorMessage = "Profile Picture is required")]
+       // [Required(ErrorMessage = "Profile Picture is required")]
         public string ProfilePictureURL { get; set; }
 
         [Display(Name = "First Name")]
@@ -31,7 +31,7 @@ namespace ResearchGate.Models
         public string Uni { get; set; }
 
         [Display(Name = "Department")]
-        [Required(ErrorMessage = "Department is required")]
+        //[Required(ErrorMessage = "Department is required")]
         [StringLength(50, MinimumLength = 3, ErrorMessage = "Department must be between 3 and 50 chars")]
         public string Dept { get; set; }
 

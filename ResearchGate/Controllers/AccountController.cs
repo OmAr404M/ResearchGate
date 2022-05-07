@@ -18,13 +18,13 @@ namespace ResearchGate.Controllers
     {
         private readonly UserManager<Auther> _userManager;
         private readonly SignInManager<Auther> _signInManager;
-        //private readonly AppDbContext _context;
+        private readonly AppDbContext _context;
 
         public AccountController(UserManager<Auther> userManager, SignInManager<Auther> signInManager, AppDbContext context)
         {
             _userManager = userManager;
             _signInManager = signInManager;
-           // _context = context;
+            _context = context;
         }
         public IActionResult Index()
         {
@@ -75,13 +75,18 @@ namespace ResearchGate.Controllers
             var newUser = new Auther()
             {
                 FirstName = registerVM.FirstName,
-                Email = registerVM.Email,
+                LastName = registerVM.LastName,
+                Mobile = registerVM.Mobile,
+                Uni = registerVM.Uni,
+                Dept = registerVM.Dept,
+                Email = registerVM.Email, 
+                ProfilePictureURL = "http://dotnethow.net/images/actors/actor-1.jpeg",
                 UserName = registerVM.Email
             };
             var newUserResponse = await _userManager.CreateAsync(newUser, registerVM.Password);
 
-            if (newUserResponse.Succeeded)
-                await _userManager.AddToRoleAsync(newUser, UserRoles.Admin);
+            //if (newUserResponse.Succeeded)
+                //await _userManager.AddToRoleAsync(newUser, UserRoles.Admin);
 
             return View("RegisterCompleted");
         }

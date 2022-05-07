@@ -22,7 +22,7 @@ namespace ResearchGate.Data.ViewModels
         public string Uni { get; set; }
 
         [Display(Name = "Department")]
-        [Required(ErrorMessage = "Department is required")]
+        //[Required(ErrorMessage = "Department is required")]
         [StringLength(50, MinimumLength = 3, ErrorMessage = "Department must be between 3 and 50 chars")]
         public string Dept { get; set; }
 
