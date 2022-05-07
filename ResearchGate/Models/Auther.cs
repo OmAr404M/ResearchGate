@@ -40,10 +40,7 @@ namespace ResearchGate.Models
         [StringLength(50, MinimumLength = 3, ErrorMessage = "Email must be between 3 and 50 chars")]
         public string Email { get; set; }
 
-        [Display(Name = "Mobile")]
-        [Required(ErrorMessage = "Mobile is required")]
-        [StringLength(50, MinimumLength = 3, ErrorMessage = "Mobile must be between 3 and 50 chars")]
-        public string Mobile { get; set; }
+       
 
         //Relationships
         public List<Auther_Paper> Authers_Papers { get; set; }

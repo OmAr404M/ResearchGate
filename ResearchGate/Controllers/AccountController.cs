@@ -76,7 +76,7 @@ namespace ResearchGate.Controllers
             {
                 FirstName = registerVM.FirstName,
                 LastName = registerVM.LastName,
-                Mobile = registerVM.Mobile,
+                PhoneNumber = registerVM.Mobile,
                 Uni = registerVM.Uni,
                 Dept = registerVM.Dept,
                 Email = registerVM.Email, 

@@ -63,7 +63,7 @@ namespace eTickets.Data
                             Uni = "helwan",
                             Dept ="cs",
                             Email = "email",
-                            Mobile = "01129552459",
+                            PhoneNumber = "01129552459",
                             ProfilePictureURL = "http://dotnethow.net/images/actors/actor-1.jpeg"
 
                         },
@@ -74,7 +74,7 @@ namespace eTickets.Data
                             Uni = "helwan",
                             Dept ="cs",
                             Email = "email",
-                            Mobile = "01129552459",
+                            PhoneNumber = "01129552459",
                             ProfilePictureURL = "http://dotnethow.net/images/actors/actor-1.jpeg"
 
                         },
