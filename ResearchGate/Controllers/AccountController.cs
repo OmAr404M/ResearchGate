@@ -38,7 +38,7 @@ namespace ResearchGate.Controllers
         {
             if (!ModelState.IsValid) return View(loginVM);
 
-            var user = await _userManager.FindByEmailAsync(loginVM.EmailAddress);
+            var user = await _userManager.FindByEmailAsync(loginVM.Email);
             if (user != null)
             {
                 var passwordCheck = await _userManager.CheckPasswordAsync(user, loginVM.Password);
