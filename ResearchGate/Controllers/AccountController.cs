@@ -19,7 +19,7 @@ namespace ResearchGate.Controllers
         private readonly UserManager<Auther> _userManager;
         private readonly SignInManager<Auther> _signInManager;
         private readonly AppDbContext _context;
-
+        //lolo
         public AccountController(UserManager<Auther> userManager, SignInManager<Auther> signInManager, AppDbContext context)
         {
             _userManager = userManager;
